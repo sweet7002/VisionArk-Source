@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <link rel="icon" type="image/png" href="favicon.ico">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Articles</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Front.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="index.html"><img src="logo.png" alt="VisionArk Logo" style="width: 100px; height: auto;"></a>
+            <nav>
+            </nav>
+        </div>
+    </header>
+    
+            </nav>
+        </div>
+    </header>
+    <section class="articles">
+        <div class="container">
+            <h2>This Month On The Internet </h2>
+            <div class="article-list">
+                <div class="article">
+                    <a href="WWDC2024.html">
+                        <img src="Article1.png" alt="Article 1 Thumbnail">
+                        <div class="writer-logo">
+                            <img src="HanApricots.png" alt="Writer Logo">
+                        </div>
+                        <div class="article-text">
+                            <h3>WWDC 2024 Overview</h3>
+                        </div>
+                    </a>
+                </div>
+                <div class="article">
+                    <a href="WTKDbrand.html">
+                        <img src="Article6.png" alt="Article 2 Thumbnail">
+                        <div class="writer-logo">
+                            <img src="HanApricots.png" alt="Writer Logo">
+                        </div>
+                        <div class="article-text">
+                            <h3>What To Know: Dbrand Controversy</h3>
+                        </div>
+                    </a>
+                </div>
+                <div class="article">
+                    <a href="ArmyOfTheDead.html">
+                        <img src="Article3.png" alt="Article 3 Thumbnail">
+                        <div class="writer-logo">
+                            <img src="Ash.png" alt="Writer Logo">
+                        </div>
+                        <div class="article-text">
+                            <h3>Google's Army Of The Dead</h3>
+                        </div>
+                    </a>
+                </div>
+                
+                <div class="article">
+                    <a href="NothingNeverSoundedSoGood.html">
+                        <img src="Article4half.png" alt="Article 4 Thumbnail">
+                        <div class="writer-logo">
+                            <img src="Ash.png" alt="Ash's Logo">
+                        </div>
+                        <div class="article-text">
+                            <h3>Nothing’s Never Sounded So Good </h3>
+                        </div>
+                    </a>
+                    <br>
+                </div>
+                <div class="article">
+                    <a href="#">
+                        <img src="placeholder.png" alt="Article 5 Thumbnail">
+                        <div class="writer-logo">
+                            <img src="placeholder.png" alt="Writer Logo">
+                        </div>
+                        <div class="article-text">
+                            <h3>Article 5 Title</h3>
+                        </div>
+                    </a>
+                </div>
+                <div class="article">
+                    <a href="#">
+                        <img src="placeholder.png" alt="Article 6 Thumbnail">
+                        <div class="writer-logo">
+                            <img src="placeholder.png" alt="Writer Logo">
+                        </div>
+                        <div class="article-text">
+                            <h3>Article 6 Title</h3>
+                        </div>
+                    </a>
+                </div>
+                        <!-- Search Bar -->
+                        <input type="text" id="searchInput" onkeyup="searchArticles()" placeholder="Search for articles...">
+            
+                        <div class="article-list" id="articleList">
+                            <!-- Article list will be dynamically updated here -->
+                        </div>
+                    </div>
+                </section>
+            
+                <script>
+                    function searchArticles() {
+                        var input = document.getElementById("searchInput").value.toLowerCase();
+                        var articles = document.querySelectorAll('.article');
+                        for (var i = 0; i < articles.length; i++) {
+                            var title = articles[i].querySelector('h3').textContent.toLowerCase();
+                            if (title.includes(input)) {
+                                articles[i].style.display = "block";
+                            } else {
+                                articles[i].style.display = "none";
+                            }
+                        }
+                    }
+                </script>
+            </body>
+            </html>
+                
+            </div>
+        </div>
+    </section>
+</body>
+</html>
