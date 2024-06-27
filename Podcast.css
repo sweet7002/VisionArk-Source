@@ -1,0 +1,73 @@
+/* Podcast.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-image: url('Wallpaper.png');
+    background-size: cover;
+    margin: 0;
+    color: #000000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+}
+
+header {
+    width: 100%;
+    padding: 10px 0;
+    text-align: left;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.podcast-player {
+    padding: 50px 0;
+}
+
+.podcast {
+    background-color: rgba(240, 240, 240, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.controls {
+    margin-bottom: 20px;
+}
+
+button {
+    background-color: #75A559;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #5a8743;
+}
+
+video {
+    width: 100%;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.8); /* Make the background of the video slightly transparent */
+}
+
+.time {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #000000;
+}
