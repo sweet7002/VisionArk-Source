@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VisionArk</title>
+    <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="visionark.png" alt="VisionArk Logo" class="logo">
+            <nav>
+                <a href="#">About Us</a>
+                <a href="#">Contact</a>
+            </nav>
+        </header>
+        <main>
+            <h1>Coming Soon</h1>
+            <div class="countdown">
+                <div class="time">
+                    <span id="days" class="number">--</span>
+                    <span class="label">days</span>
+                </div>
+                <div class="time">
+                    <span id="hours" class="number">--</span>
+                    <span class="label">hours</span>
+                </div>
+                <div class="time">
+                    <span id="minutes" class="number">--</span>
+                    <span class="label">minutes</span>
+                </div>
+                <div class="time">
+                    <span id="seconds" class="number">--</span>
+                    <span class="label">seconds</span>
+                </div>
+            </div>
+            <br>
+            <div class="form-container">
+                <input type="email" id="email" name="email" placeholder="Your email" required>
+                <button onclick="submitEmail()">Send</button>
+            </div>
+        </main>
+        <footer>
+            <p>© VisionArk</p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
