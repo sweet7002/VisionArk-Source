@@ -9,15 +9,17 @@ body {
     background-size: cover;
     color: #2C3E50;
     text-align: center;
+    box-sizing: border-box; 
 }
 
 .container {
-    background-color: rgba(255, 255, 255, 0.7); /* Lowered opacity */
+    background-color: rgba(255, 255, 255, 0.7); 
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     max-width: 800px;
     width: 100%;
+    box-sizing: border-box;
 }
 
 header {
@@ -25,10 +27,11 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 10px;
+    box-sizing: border-box;
 }
 
 .logo {
-    width: 40px; /* Made the logo smaller */
+    width: 40px; 
 }
 
 nav a {
@@ -36,7 +39,7 @@ nav a {
     text-decoration: none;
     margin: 0 10px;
     font-weight: 500;
-    display: none; /* Hide the About Us and Contact links */
+    display: none; 
 }
 
 main h1 {
@@ -81,6 +84,8 @@ main p {
 .form-container {
     display: flex;
     justify-content: center;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .form-container input {
@@ -88,8 +93,9 @@ main p {
     font-size: 16px;
     border: 1px solid #BDC3C7;
     border-radius: 5px;
-    width: 150px;
+    width: calc(100% - 110px); 
     margin-right: 10px;
+    box-sizing: border-box;
 }
 
 .form-container button {
@@ -100,6 +106,7 @@ main p {
     font-size: 16px;
     cursor: pointer;
     border-radius: 5px;
+    box-sizing: border-box;
 }
 
 .form-container button:hover {
@@ -112,19 +119,21 @@ footer {
     color: #2C3E50;
 }
 
-/* Media Queries for Mobile Optimization */
 @media (max-width: 600px) {
     body {
         padding: 10px;
+        box-sizing: border-box;
     }
 
     .container {
         padding: 10px;
+        box-sizing: border-box;
     }
 
     header {
         flex-direction: column;
         align-items: center;
+        padding: 5px;
     }
 
     .logo {
@@ -144,20 +153,32 @@ footer {
         font-size: 14px;
     }
 
+    main p {
+        font-size: 14px;
+        margin: 10px 0;
+    }
+
     .form-container {
         flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding: 0;
+        box-sizing: border-box;
     }
 
     .form-container input {
         width: 100%;
         margin: 0 0 10px 0;
+        box-sizing: border-box;
     }
 
     .form-container button {
         width: 100%;
+        box-sizing: border-box;
     }
 
     footer {
         font-size: 12px;
+        margin-top: 10px;
     }
 }
