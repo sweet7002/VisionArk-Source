@@ -92,7 +92,7 @@ body, html {
 }
 
 .countdown-item::before {
-    content: "🦕";
+    content: "";
     font-size: 36px; /* Increased size of dinosaur emoji */
     position: absolute;
     top: -50px; /* Positioning the dinosaur emoji above the countdown */
