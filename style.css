@@ -99,3 +99,29 @@ body, html {
     left: 50%;
     transform: translateX(-50%);
 }
+
+/* Mobile Optimization */
+@media (max-width: 768px) {
+    .logo {
+        width: 100px;
+    }
+    
+    .logo.smaller {
+        width: 30px; /* Smaller size on mobile */
+    }
+
+    .countdown {
+        flex-direction: column;
+        gap: 20px; /* Reduced gap for mobile */
+    }
+
+    .countdown-item {
+        font-size: 48px; /* Smaller font size for mobile */
+        padding: 20px; /* Smaller padding for mobile */
+    }
+
+    .countdown-item::before {
+        font-size: 24px; /* Smaller emoji for mobile */
+        top: -30px; /* Adjusted position for mobile */
+    }
+}
