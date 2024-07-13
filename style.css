@@ -8,19 +8,9 @@ body, html {
     justify-content: center;
     font-family: Arial, sans-serif;
     background-color: #f0f0f0; /* Slight grey background */
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 24 24'%3E%3Ctext y='20' font-size='20'%3E🦕%3C/text%3E%3C/svg%3E");
+    background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MCIgaGVpZ2h0PSI1MCIgdmlld0JveD0iMCAwIDI0IDI0Ij4KICA8Y2lyY2xlIGN4PSI1IiBjeT0iNSIgcj0iMiIgZmlsbD0iI2NjY2NjYyIIG9wYWNpdHk9IjAuMjUiIC8+CiAgPGNpcmNsZSBjeD0iNSIgY3k9IjE5IiByPSI1IiBmaWxsPSIjY2NjY2NjIiBvcGFjaXR5PSIwLjI1IiAvPgogIDxjaXJjbGUgY3g9IjE5IiBjeT0iNSIgcj0iMiIgZmlsbD0iI2NjY2NjYyIgb3BhY2l0eT0iMC4yNSIgLz4KPC9zdmc+Cg==');
     background-repeat: repeat;
-    background-attachment: fixed; /* Make background scroll */
-    animation: scrollBg 300s linear infinite;
-}
-
-@keyframes scrollBg {
-    from {
-        background-position: 0 0;
-    }
-    to {
-        background-position: 10000px 10000px;
-    }
+    background-size: 50px 50px; /* Size of the polka dots */
 }
 
 .page {
@@ -32,6 +22,7 @@ body, html {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
     transition: opacity 1s;
 }
 
@@ -39,13 +30,14 @@ body, html {
     background-color: rgba(240, 240, 240, 0.9); /* Slight grey background with some transparency */
     z-index: 1;
     opacity: 1;
+    cursor: pointer;
 }
 
 .page-2 {
     background-color: rgba(240, 240, 240, 0.9); /* Slight grey background with some transparency */
     z-index: 0;
     opacity: 0;
-    animation: scrollBg 600s linear infinite; /* Massively slower scroll */
+    display: none; /* Hide initially */
 }
 
 .logo {
@@ -61,7 +53,7 @@ body, html {
 }
 
 .logo.smaller {
-    width: 50px; /* Much smaller size on countdown page */
+    width: 50px; /* Much smaller size on the second page */
 }
 
 @keyframes slideUp {
@@ -75,42 +67,61 @@ body, html {
     }
 }
 
-.countdown {
+.message {
     display: flex;
-    gap: 30px; /* Increased gap between countdown items */
+    gap: 10px; /* Gap between message items */
+    font-size: 24px; /* Adjust font size as needed */
+    font-weight: bold;
+    color: black;
+    margin-top: 20px;
+    justify-content: center;
+    align-items: center;
 }
 
 .countdown-item {
-    background-color: #4caf50; /* Green color matching the dinosaur theme */
+    background-color: #000000; /* Black color */
     color: white;
-    font-size: 72px; /* Increased font size */
+    font-size: 36px; /* Reduced font size */
     font-weight: bold;
-    padding: 40px; /* Increased padding */
-    border-radius: 20px; /* Increased border radius */
+    padding: 20px; /* Reduced padding */
+    border-radius: 10px; /* Reduced border radius */
     text-align: center;
     position: relative;
+    cursor: pointer;
 }
 
+.dino {
+    position: absolute;
+    top: -50px;
+    font-size: 50px; /* Adjust size as needed */
+    animation: fall linear infinite;
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(100vh);
+    }
+}
 
 /* Mobile Optimization */
 @media (max-width: 768px) {
     .logo {
         width: 100px;
     }
-    
+
     .logo.smaller {
         width: 30px; /* Smaller size on mobile */
     }
 
-    .countdown {
+    .message {
         flex-direction: column;
         align-items: center;
-        gap: 20px; /* Reduced gap for mobile */
+        font-size: 18px; /* Adjust font size for mobile */
     }
 
     .countdown-item {
-        font-size: 48px; /* Smaller font size for mobile */
-        padding: 20px; /* Smaller padding for mobile */
+        font-size: 24px; /* Smaller font size for mobile */
+        padding: 10px; /* Smaller padding for mobile */
     }
 
     .countdown-item::before {
