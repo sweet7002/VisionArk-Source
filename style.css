@@ -112,6 +112,7 @@ body, html {
 
     .countdown {
         flex-direction: column;
+        align-items: center;
         gap: 20px; /* Reduced gap for mobile */
     }
 
