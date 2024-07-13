@@ -3,84 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VisionArk</title>
-    <link rel="stylesheet" href="index.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <style>
-        body, html {
-            margin: 0;
-            padding: 0;
-            height: 100%;
-            width: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-family: 'Roboto', sans-serif;
-            background-image: url('wallpaper.png'); /* Using wallpaper.png as the background image */
-            background-size: cover;
-            background-position: center;
-        }
-
-        .countdown {
-            text-align: center;
-            color: white;
-        }
-
-        .time {
-            display: inline-block;
-            margin: 0 10px;
-        }
-
-        .number {
-            font-size: 2em;
-            display: block;
-        }
-
-        .label {
-            font-size: 1em;
-        }
-    </style>
+    <title>Visionark</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="countdown">
-        <div class="time">
-            <span id="days" class="number">--</span>
-            <span class="label">days</span>
-        </div>
-        <div class="time">
-            <span id="hours" class="number">--</span>
-            <span class="label">hours</span>
-        </div>
-        <div class="time">
-            <span id="minutes" class="number">--</span>
-            <span class="label">minutes</span>
-        </div>
-        <div class="time">
-            <span id="seconds" class="number">--</span>
-            <span class="label">seconds</span>
+    <div class="page page-1">
+        <img src="visionark.png" alt="Visionark Logo" class="logo">
+    </div>
+    <div class="page page-2">
+        <img src="visionark.png" alt="Visionark Logo" class="logo top-left smaller">
+        <div class="countdown">
+            <div class="countdown-item" id="days">0</div>
+            <div class="countdown-item" id="hours">0</div>
+            <div class="countdown-item" id="minutes">0</div>
         </div>
     </div>
-    <script>
-        // Countdown timer
-        function countdown() {
-            const targetDate = new Date('September 1, 2024 00:00:00').getTime();
-            const now = new Date().getTime();
-            const difference = targetDate - now;
-
-            const days = Math.floor(difference / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((difference % (1000 * 60)) / 1000);
-
-            document.getElementById('days').innerText = days;
-            document.getElementById('hours').innerText = hours;
-            document.getElementById('minutes').innerText = minutes;
-            document.getElementById('seconds').innerText = seconds;
-        }
-
-        setInterval(countdown, 1000);
-        countdown(); // Initial call to display the countdown immediately
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
