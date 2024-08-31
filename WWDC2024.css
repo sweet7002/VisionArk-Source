@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-image: url('Wallpaper.png');
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: center; 
+    background-color: rgba(255, 255, 255, 0.5); 
+    backdrop-filter: blur(5px); 
+    text-align: left; 
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header {
+    color: #ffffff;
+    padding: 20px 0;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li:last-child {
+    margin-right: 0;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.author-info {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.author-info img {
+    width: 60px;
+    border-radius: 50%;
+    border: 2px solid #ffffff;
+    margin-bottom: 20px;
+}
+
+.article-content {
+    margin-top: 50px;
+}
+
+.article-text {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    padding: 20px;
+    color: #333;
+    font-size: 16px;
+    line-height: 1.6;
+    text-align: left; 
+    margin-bottom: 20px; 
+}
+
+h1 {
+    color: #ffffff; 
+    margin-bottom: 20px;
+    text-align: center; 
+} 
+
+.thumbnail img {
+    width: 50%;
+    display: block;
+    margin: 0 auto 20px; 
+}
+
+.adjustable-image {
+    width: 100%;
+    height: auto; 
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1); 
+}
+
+#toggle-wallpaper-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: #ffffff;
+    color: #000000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#toggle-wallpaper-btn:hover {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+#audio-controls {
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    bottom: 20px;
+    width: 100%;
+}
+
+#playPauseButton {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#playPauseButton:hover {
+    background-color: #0056b3;
+}
