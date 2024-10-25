@@ -1,38 +1,31 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const toggleButton = document.getElementById('toggle-ads-btn');
-    const progressBar = document.getElementById('progress-bar');
+document.addEventListener('DOMContentLoaded', (event) => {
+    const page1 = document.getElementById('page-1');
+    const page2 = document.getElementById('page-2');
+    const launchDate = document.getElementById('launch-date');
 
-    // Function to apply the ad preference from localStorage
-    function applyStoredAdPreference() {
-        const adPreference = localStorage.getItem('adsEnabled');
-        if (adPreference === 'true') {
-            progressBar.style.display = 'none'; // Hide progress bar if ads are enabled
-        } else {
-            progressBar.style.display = 'none'; // Keep hidden if ads are disabled
+    setTimeout(() => {
+        page1.style.opacity = '0';
+        setTimeout(() => {
+            page1.style.display = 'none';
+            page2.style.display = 'flex';
+            page2.style.opacity = '1';
+        }, 1000); 
+    }, 3000);
+
+    launchDate.addEventListener('click', () => {
+        launchDate.style.backgroundColor = '#4caf50'; 
+
+        for (let i = 0; i < 10; i++) {
+            const dino = document.createElement('div');
+            dino.classList.add('dino');
+            dino.textContent = '🦕';
+            dino.style.left = Math.random() * window.innerWidth + 'px';
+            dino.style.animationDuration = (Math.random() * 3 + 2) + 's'; 
+            document.body.appendChild(dino);
+
+            dino.addEventListener('animationend', () => {
+                dino.remove();
+            });
         }
-    }
-
-    // Load and apply the ad preference on page load
-    applyStoredAdPreference();
-
-    toggleButton.addEventListener('click', () => {
-        // Show the progress bar
-        progressBar.style.display = 'block';
-        progressBar.style.width = '0';
-
-        // Animate the progress bar
-        let width = 0;
-        const interval = setInterval(() => {
-            if (width >= 100) {
-                clearInterval(interval);
-                progressBar.style.display = 'none';
-                
-                // Save the ad preference to localStorage
-                localStorage.setItem('adsEnabled', true);
-            } else {
-                width++;
-                progressBar.style.width = width + '%';
-            }
-        }, 200); // Adjust speed of progress bar here (lower value = faster)
     });
 });
