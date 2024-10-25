@@ -1,71 +1,121 @@
-/* Basic reset */
-body, html {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    width: 100%;
+body {
+    font-family: 'Roboto', sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: 'Poppins', sans-serif;
-    background: url('Wallpaper.png') no-repeat center center fixed;  /* Use Wallpaper.png as the background */
-    background-size: cover;  /* Ensure the background covers the entire page */
-}
-
-.hero {
-    text-align: center;  /* Center text within the hero section */
-    height: 100vh;  /* Ensure hero section takes full viewport height */
+    height: 100vh;
+    margin: 0;
+    background: url('wallpaper.png') no-repeat center center fixed;
+    background-size: cover;
+    color: #2C3E50;
+    text-align: center;
 }
 
 .container {
-    display: flex;
-    flex-direction: column;  /* Stack elements vertically */
-    align-items: center;     /* Center elements horizontally */
-    justify-content: flex-start; /* Align elements towards the top */
-    padding-top: 20vh;  /* Push content down a bit from the top */
-}
-
-h2 {
-    font-size: 3em;  /* Larger font size for the heading */
-    font-weight: 700;
-    margin-bottom: 10px;  /* Adds space between the heading and the paragraph */
-    color: #ffffff;  /* White text color for contrast against the background image */
-}
-
-p {
-    font-size: 1.5em;  /* Larger font size for the paragraph */
-    font-weight: 400;
-    margin-bottom: 20px;  /* Adds space between the paragraph and the button */
-    color: #ffffff;  /* White text color for contrast */
-}
-
-/* Ensure the buttons align horizontally */
-.btn-container {
-    display: flex;
-    gap: 10px; /* Adds space between the buttons */
-}
-
-.btn {
-    display: inline-block;
-    padding: 15px 30px;  /* Increased padding for a larger button */
-    font-size: 1.2em;  /* Larger font size for the button text */
-    text-decoration: none;
-    color: #fff;
-    background-color: #7aa862;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;  /* Smooth transition for hover effect */
-}
-
-.btn:hover {
-    background-color: #46742d;  /* Darker green on hover */
-}
-
-/* Optional: Styling for the progress bar if needed */
-#progress-bar {
-    position: absolute;
-    bottom: 0;
-    left: 0;
+    background-color: rgba(255, 255, 255, 0.7); 
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
     width: 100%;
-    height: 5px;
-    background-color: #ddd;  /* Light grey for progress bar background */
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.logo {
+    width: 40px; 
+}
+
+nav a {
+    color: #2C3E50;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: 500;
+}
+
+main h1 {
+    font-size: 28px;
+    margin: 20px 0;
+    font-weight: 700;
+}
+
+.countdown {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.countdown .time {
+    margin: 0 10px;
+    text-align: center;
+}
+
+.countdown .number {
+    font-size: 48px;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 5px;
+    color: #000000;
+}
+
+.countdown .label {
+    font-size: 16px;
+    font-weight: 500;
+    color: #2C3E50;
+}
+
+main p {
+    font-size: 16px;
+    margin: 20px 0;
+}
+
+.form-container {
+    display: flex;
+    justify-content: center;
+}
+
+.form-container input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #BDC3C7;
+    border-radius: 5px;
+    width: 300px;
+    margin-right: 10px;
+}
+
+.form-container button {
+    background-color: #000000;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.form-container button:hover {
+    background-color: #D9A773;
+}
+
+footer {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #2C3E50;
+}
+
+.message {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.paragraph {
+    line-height: 1.6;
+    text-align: center;
 }
