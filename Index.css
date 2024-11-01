@@ -1,4 +1,3 @@
-
 * {
     margin: 0;
     padding: 0;
@@ -6,12 +5,12 @@
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins", sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background: url('wallpaper.png') no-repeat center center fixed;
+    background: url("wallpaper.png") no-repeat center center fixed;
     background-size: cover;
     color: #333;
 }
@@ -53,5 +52,5 @@ body {
 }
 
 .btn:hover {
-    background-color: #D9A773;
+    background-color: #7aa862;
 }

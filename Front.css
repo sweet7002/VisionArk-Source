@@ -5,8 +5,8 @@
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
-    background-image: url('wallpaper.png');
+    font-family: "Poppins", sans-serif;
+    background-image: url("wallpaper.png");
     background-size: cover;
     backdrop-filter: blur(0px);
     margin: 0;
@@ -33,7 +33,7 @@ nav ul li {
 }
 
 nav ul li:last-child {
-    margin-right: 0; 
+    margin-right: 0;
 }
 
 nav ul li a {
@@ -42,7 +42,7 @@ nav ul li a {
 }
 
 nav {
-    float: right; 
+    float: right;
 }
 
 header h1 {
@@ -91,7 +91,7 @@ header h1 {
 }
 
 .article-text {
-    background-color: #D9A773; 
+    background-color: #7aa862;
     padding: 10px;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
@@ -115,24 +115,24 @@ header h1 {
 .writer-logo img {
     width: 100%;
     height: 100%;
-    object-fit: cover; 
+    object-fit: cover;
 }
 
 .search-container {
-    margin-top: 20px; 
-    text-align: center; 
+    margin-top: 20px;
+    text-align: center;
 }
 
 .search-container input[type="text"] {
-    width: 70%; 
-    padding: 10px; 
-    font-size: 16px; 
+    width: 70%;
+    padding: 10px;
+    font-size: 16px;
     border: none;
-    border-radius: 25px; 
-    margin-bottom: 20px; 
-    background-color: #000000; 
-    color: #ffffff; 
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+    border-radius: 25px;
+    margin-bottom: 20px;
+    background-color: #000000;
+    color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .search-container input[type="text"]:focus {
