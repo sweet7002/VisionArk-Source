@@ -23,6 +23,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
             dino.style.animationDuration = (Math.random() * 3 + 2) + 's'; 
             document.body.appendChild(dino);
 
+            // Remove the dinosaur after animation ends
             dino.addEventListener('animationend', () => {
                 dino.remove();
             });
